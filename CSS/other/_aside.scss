@@ -1,0 +1,49 @@
+aside {
+    width: 82px;
+    height: 100vh;
+    position: fixed;
+    background-color: $light-bg;
+    margin-top: 60px;
+    overflow: hidden;
+    transition: width 0.4s;
+    z-index: -1;
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        li {
+            width: 100%;
+            transition: 0.2s;
+            a {
+                display: flex;
+                align-items: center;
+                color: $primary-color;
+                text-decoration: none;
+                div {
+                    min-width: 82px;
+                    height: 50px;
+                    position: relative;
+                    i {
+                        font-size: 22px;
+                        color: $light-second-color;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                span {
+                    color: $dark;
+                }
+            }
+        }
+    }
+    &.active {
+        width: 250px;
+    }
+    @media (max-width: 500px) {
+        width: 0;
+    }
+}

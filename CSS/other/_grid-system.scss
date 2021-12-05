@@ -1,0 +1,21 @@
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: (100% / (12 / $i));
+    }
+}
+
+@media (max-width: 991px) {
+    @for $i from 1 through 12 {
+        .col-md-#{$i} {
+            width: (100% / (12 / $i));
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    @for $i from 1 through 12 {
+        .col-sm-#{$i} {
+            width: (100% / (12 / $i));
+        }
+    }
+}

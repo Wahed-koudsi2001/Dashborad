@@ -1,0 +1,81 @@
+@import "other/variables";
+@import "other/grid-system";
+@import "other/navbar";
+@import "other/aside";
+@import "other/content";
+@import "other/utilities";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: $light-second-bg;
+}
+
+nav,
+aside,
+.row .box {
+    &.change {
+        @if $light-bg == #fff {
+            background-color: $light-color;
+        }
+        box-shadow: 1px 3px 3px $light-color;
+    }
+}
+
+.fa-moon,
+.fa-bell,
+.fa-bars {
+    &.change {
+        @if $light-second-color == #727475 {
+            color: $light-bg;
+        }
+    }
+}
+
+aside ul li a i {
+    &.change {
+        @if $light-second-color == #727475 {
+            color: $light-bg;
+        }
+    }
+}
+
+.input input {
+    &.change {
+        @if $grey-light == #eee {
+            background: $light-second-bg;
+        } @else {
+            background: $light-second-bg;
+        }
+    }
+}
+
+aside span {
+    &.change {
+        @if $dark == #000 {
+            color: $light-second-bg;
+        }
+    }
+}
+
+.content {
+    &.change {
+        @if $light-second-bg == #f1f1f1 {
+            background-color: $dark;
+        }
+    }
+}
+
+.card,
+.progress {
+    &.change {
+        background-color: $light-color !important;
+        color: $light-second-bg;
+        box-shadow: none;
+    }
+}
